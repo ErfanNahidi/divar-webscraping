@@ -40,7 +40,7 @@ for link in full_links:
     print(f"Visiting: {link}")
     
     driver.get(link)
-    time.sleep(2)  # Wait for the listing page to load
+    time.sleep(4)  # Wait for the listing page to load
 
     # Parse the listing page content
     page_soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -66,47 +66,40 @@ for link in full_links:
         build_year_text = "Build Year not found"
         room_number_text = "Room Count not found"
 
-   # Extract all relevant data (Price, Price per meter, and Floor)
+    # Extract price, price per meter, and floor number
     price_tags = page_soup.find_all("p", class_="kt-unexpandable-row__value")
-    
-    # Check if we have enough data points (at least 3 values)
     if len(price_tags) >= 3:
-        total_price_text = price_tags[0].get_text(strip=True)  # Price in total
-        per_meter_price_text = price_tags[1].get_text(strip=True)  # Price per meter
-        floor_number_text = price_tags[2].get_text(strip=True)  # Floor number
-
-        # Print the extracted information
-        print(f"Total Price: {total_price_text}")
-        print(f"Price per Meter: {per_meter_price_text}")
-        print(f"Floor: {floor_number_text}")
-        
-        # You can now append this data to your data list as required
-        data.append({
-            "Total Price": total_price_text,
-            "Price per Meter": per_meter_price_text,
-            "Floor": floor_number_text
-        })
+        try:
+            total_price_text = price_tags[0].get_text(strip=True)  # Price in total
+            per_meter_price_text = price_tags[1].get_text(strip=True)  # Price per meter
+            floor_number_text = price_tags[2].get_text(strip=True)  # Floor number
+        except Exception as e:
+            total_price_text = "Price not found"
+            per_meter_price_text = "Price per meter not found"
+            floor_number_text = "Floor number not found"
+            print(f"Error extracting price info: {e}")
+    else:
+        total_price_text = "Price not found"
+        per_meter_price_text = "Price per meter not found"
+        floor_number_text = "Floor number not found"
 
     # Extract description
+    description_text = "Description not found"  # Default value
     description_tag = page_soup.find("p", class_="kt-description-row__text kt-description-row__text--primary")
     if description_tag:
         description_text = description_tag.get_text(strip=True)
-    else:
-        description_text = "Description not found"
 
-
-    # Append data to the list
+    # Add data to the list for each listing
     data.append({
-    "Title": name_reportaj_text,  # نام گزارش/عنوان ملک
-    "Area": area_text,  # متراژ
-    "Total Price": total_price_text,  # قیمت کل
-    "Price per Meter": per_meter_price_text,  # قیمت هر متر
-    "Room Count": room_number_text,  # تعداد اتاق‌ها
-    "Build Year": build_year_text,  # سال ساخت
-    "Description": description_text,  # توضیحات
-    "URL": link  # لینک آگهی
-})
-
+        "Title": name_reportaj_text,
+        "Area": area_text,
+        "Total Price": total_price_text,
+        "Price per Meter": per_meter_price_text,
+        "Room Count": room_number_text,
+        "Build Year": build_year_text,
+        "Description": description_text,
+        "URL": link
+    })
 
     print(f"Extracted: {name_reportaj_text}, {total_price_text}, {area_text}")
     print("-" * 50)
