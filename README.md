@@ -6,4 +6,4 @@
 فایل csv حاوی اطلاعات استخراج شده از دیوار در این لینک زیر قرار دارد 
 
 
-https://www.kaggle.com/datasets/erfannahidi/house-for-sale-ads-on-divar-site-iran-tehran/data
+https://www.kaggle.com/datasets/mokar2001/house-price-tehran-iran
