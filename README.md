@@ -1,4 +1,3 @@
-Sure! Here's the `README.md` content in Markdown code format, ready to be copied into your GitHub project:
 
 ```markdown
 # 🏘️ Divar Property Scraper
