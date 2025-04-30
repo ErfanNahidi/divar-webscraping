@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ## 🛠️ Usage
 
 ```bash
-python 2.py
+python main.py
 ```
 
 You will be prompted to enter:
