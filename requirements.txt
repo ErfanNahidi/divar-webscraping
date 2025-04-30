@@ -1,0 +1,9 @@
+# Core scraping
+selenium==4.18.1
+beautifulsoup4==4.12.3
+
+# Data handling
+pandas==2.2.1
+
+# System resource management
+psutil==5.9.8
