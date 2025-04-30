@@ -99,7 +99,7 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-
+```
 Developed with love by **Erfan** 🧠⚙️  
 Passionate about data science, software engineering, and behavioral intelligence.
 
