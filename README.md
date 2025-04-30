@@ -90,6 +90,16 @@ Title, Area, Total Price, Price per Meter, Room Count, Build Year, Floor Number,
 ...
 ```
 
+## 🧩 Requirements
+
+- Python 3.7+
+- `chromedriver` or `geckodriver` in PATH
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+
 Developed with love by **Erfan** 🧠⚙️  
 Passionate about data science, software engineering, and behavioral intelligence.
 
