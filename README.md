@@ -1,5 +1,5 @@
 
-```markdown
+
 # 🏘️ Divar Property Scraper
 
 A high-performance, multi-threaded web scraper built in Python to extract real estate listings from [Divar.ir](https://divar.ir), Iran’s leading classified ads platform. This tool uses `Selenium` and `BeautifulSoup` to automate data extraction, supporting both Firefox and Chrome in headless mode.
@@ -97,6 +97,3 @@ Title, Area, Total Price, Price per Meter, Room Count, Build Year, Floor Number,
 Developed with love by **Erfan** 🧠⚙️  
 Passionate about data science, software engineering, and behavioral intelligence.
 ```
-
-اگر خواستی نسخه فارسی هم برات بنویسم یا بخوای فایل `requirements.txt` هم تولید کنم، فقط کافیه بگی 😉  
-می‌خوای یه کاور گرافیکی هم بسازم برای پروژه‌ات؟ 🎨
