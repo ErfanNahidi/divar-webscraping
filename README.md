@@ -88,11 +88,6 @@ Each property will include:
 ```csv
 Title, Area, Total Price, Price per Meter, Room Count, Build Year, Floor Number, Description, URL, Timestamp
 ...
-```
-
----
-
-## 📌 Author
 
 Developed with love by **Erfan** 🧠⚙️  
 Passionate about data science, software engineering, and behavioral intelligence.
