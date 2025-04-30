@@ -96,12 +96,6 @@ Title, Area, Total Price, Price per Meter, Room Count, Build Year, Floor Number,
 
 Developed with love by **Erfan** 🧠⚙️  
 Passionate about data science, software engineering, and behavioral intelligence.
-
----
-
-## 🛡️ Disclaimer
-
-This tool is for educational and research purposes only. Use responsibly and comply with Divar's terms of service.
 ```
 
 اگر خواستی نسخه فارسی هم برات بنویسم یا بخوای فایل `requirements.txt` هم تولید کنم، فقط کافیه بگی 😉  
